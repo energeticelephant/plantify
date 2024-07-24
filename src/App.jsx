@@ -196,7 +196,7 @@ function App() {
             textDecoration="none"
             marginTop={2}
           >
-            Plantify is a one-stop shop for all your gardening needs, offering a wide range of products, from gardening tools and flowers to potted plants and Ikebana arrangements.
+            Plantify is a one-stop shop for all your gardening needs, offering a wide range of products, from gardening tools and flowers to potted plants and Ikebana arrangements. COMING SOON!
           </Typography>
         </Container>
       </section>
