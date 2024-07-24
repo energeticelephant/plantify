@@ -13,11 +13,11 @@ import {
   Typography,
 } from "@mui/material";
 import ResponsiveAppBar from "./components/AppBar.jsx";
-import backgroundImage from "./assets/background.png";
-import baccarat from "./assets/Baccarat-1.jpg";
-import blackjack from "./assets/Blackjack-1.jpg";
-import roulette from "./assets/Roulette-1.jpg";
-import slots from "./assets/Slots-1.jpg";
+import backgroundImage from "./assets/banner.png";
+import baccarat from "./assets/flowers.jpeg";
+import blackjack from "./assets/pottedplant.jpg";
+import roulette from "./assets/tools.jpeg";
+import slots from "./assets/ikebana.jpg";
 import { Margin } from "@mui/icons-material";
 import Footer from "./components/footer.jsx";
 
@@ -47,30 +47,6 @@ function App() {
             padding: [2, 3, 4],
           }}
         >
-          <Box
-            sx={{
-              padding: 4,
-              color: "white",
-              textAlign: "center",
-              width: {
-                xs: "100%", // 100% width on extra-small screens
-                sm: "80%", // 80% width on small screens
-                md: "60%", // 60% width on medium screens
-                lg: "80%", // 40% width on large screens
-                xl: "30%", // 30% width on extra-large screens
-              },
-              fontSize: {
-                xs: "1rem", // 1.5rem font size on extra-small screens
-                sm: "1rem", // 2rem font size on small screens
-                md: "1.5rem", // 2.5rem font size on medium screens
-                lg: "2rem", // 3rem font size on large screens
-                xl: "2.5rem", // 3.5rem font size on extra-large screens
-              },
-            }}
-          >
-            <h1>EXPERIENCE THE THRILL</h1>
-            <p>The Number 1 Gaming Platform:</p>
-          </Box>
         </Container>
       </section>
       <section id="games">
@@ -90,7 +66,7 @@ function App() {
             textDecoration="none"
             marginTop={4}
           >
-            Check Out Our Upcoming Games!
+            Check Out Our Products!
           </Typography>
           <Grid
             container
@@ -114,12 +90,10 @@ function App() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Roulette
+                      Gardening Tools
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      A casino game where players bet on where a ball will land
-                      on a spinning wheel divided into numbered and colored
-                      sections.
+                    Gardening tools are essential items used for cultivating plants and maintaining gardens, including shovels, rakes, pruners, etc.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -136,12 +110,10 @@ function App() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Baccarat
+                      Flowers
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      A card game where players bet on the outcome of the hand,
-                      trying to predict whether the player's or the banker's
-                      hand will be closer to a value of nine.
+                    Flowers are vibrant and fragrant plants that enhance any space with their beauty and variety, making them perfect for gifts, decorations, etc.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -158,11 +130,10 @@ function App() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Blackjack
+                      Potted Plants
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      A card game where players aim to have a hand value closer
-                      to 21 than the dealer's without exceeding 21.
+                    Potted plants are versatile and decorative, ideal for indoor and outdoor spaces, offering a touch of greenery and elegance to any environment while being easy to care for and maintain.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -179,11 +150,10 @@ function App() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Slots
+                      Ikebana
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      A game of chance played on a machine with spinning reels,
-                      where players win by matching symbols on pay lines.
+                    Ikebana is the traditional Japanese art of flower arrangement, focusing on harmony, balance, and simplicity, creating stunning and meaningful displays that celebrate the beauty of nature.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -193,7 +163,7 @@ function App() {
         </Container>
       </section>
       <section id="aboutus">
-        <Container maxWidth="lg" sx={{marginTop:'5px'}}>
+        <Container maxWidth="lg" sx={{ marginTop: "5px" }}>
           <Typography
             variant="h3"
             textAlign="center"
@@ -226,8 +196,7 @@ function App() {
             textDecoration="none"
             marginTop={2}
           >
-            BETWAGER is an online platform providing casino games for your
-            entertainment. More services will be coming soon. Stay tuned!
+            Plantify is a one-stop shop for all your gardening needs, offering a wide range of products, from gardening tools and flowers to potted plants and Ikebana arrangements.
           </Typography>
         </Container>
       </section>

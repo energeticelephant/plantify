@@ -11,11 +11,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import logo from '../assets/logo copy.png'
+import logo from '../assets/logo.png'
 
 const pages = [
   { name: 'Home', href: '#home' },
-  { name: 'Games', href: '#games' },
+  { name: 'Products', href: '#products' },
   { name: 'About Us', href: '#aboutus' }
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
