@@ -19,7 +19,7 @@ const Footer = () => {
             <Typography variant="body1">
               Follow us on social media
             </Typography>
-            <IconButton href="https://x.com/plantify42" target="_blank">
+            <IconButton href="https://x.com/theplantifystore" target="_blank">
               <TwitterIcon />
             </IconButton>
           </Grid>
