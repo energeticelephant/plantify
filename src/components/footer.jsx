@@ -19,14 +19,14 @@ const Footer = () => {
             <Typography variant="body1">
               Follow us on social media
             </Typography>
-            <IconButton href="https://twitter.com/plantify" target="_blank">
+            <IconButton href="https://x.com/plantify42" target="_blank">
               <TwitterIcon />
             </IconButton>
           </Grid>
           <Grid item xs={12} sm={4} textAlign="center">
             <Typography variant="body2" color="text.secondary">
               {'© '}
-              <Link color="inherit" href="https://yourwebsite.com/">
+              <Link color="inherit" href="https://plantify.dev/">
                 PLANTIFY
               </Link>{' '}
               {new Date().getFullYear()}
