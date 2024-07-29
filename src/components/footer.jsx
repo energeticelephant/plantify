@@ -23,7 +23,7 @@ const Footer = () => {
         >
           <Grid item xs={12} sm={4} textAlign="center">
             <Typography variant="body1">Follow us on social media</Typography>
-            <IconButton href="https://twitter.com/plantify" target="_blank">
+            <IconButton href="https://twitter.com/theplantifyshop" target="_blank">
               <TwitterIcon />
             </IconButton>
           </Grid>
