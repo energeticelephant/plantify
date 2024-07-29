@@ -7,22 +7,21 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import logo from '../assets/logo.png'
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const pages = [
-  { name: 'Home', href: '#home' },
-  { name: 'Products', href: '#products' },
-  { name: 'About Us', href: '#aboutus' }
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/aboutus' }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Home', 'About Us'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -39,15 +38,25 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  const handleNavClick = (href) => {
+    if (href.startsWith('#')) {
+      const id = href.substring(1);
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(href);
+    }
+    handleCloseNavMenu();
+  };
+
   return (
-    <AppBar position="static" sx={{backgroundColor: 'black'}}>
+    <AppBar position="static" sx={{ backgroundColor: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#home"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -58,7 +67,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={logo} alt="logo" style={{width: '50px'}} />
+            <img src={logo} alt="logo" style={{ width: '50px' }} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -91,8 +100,8 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" component="a" href={page.href}>
+                <MenuItem key={page.name} onClick={() => handleNavClick(page.href)}>
+                  <Typography textAlign="center">
                     {page.name}
                   </Typography>
                 </MenuItem>
@@ -103,7 +112,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#home"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -115,16 +124,14 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={logo} alt="logo" style={{width: '50px'}} />
+            <img src={logo} alt="logo" style={{ width: '50px' }} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleNavClick(page.href)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-                component="a"
-                href={page.href}
               >
                 {page.name}
               </Button>
