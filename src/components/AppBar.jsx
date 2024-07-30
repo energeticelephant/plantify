@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const pages = [
@@ -49,7 +49,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'black' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#556B2F' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -60,11 +60,13 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'Roboto',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              textTransform: 'lowercase',
+              fontSize: '1.5rem',
             }}
           >
             <img src={logo} alt="logo" style={{ width: '50px' }} />
@@ -101,7 +103,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={() => handleNavClick(page.href)}>
-                  <Typography textAlign="center">
+                  <Typography textAlign="center" sx={{ textTransform: 'lowercase', fontSize: '1.25rem' }}>
                     {page.name}
                   </Typography>
                 </MenuItem>
@@ -117,11 +119,13 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'Roboto',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              textTransform: 'lowercase',
+              fontSize: '1.5rem',
             }}
           >
             <img src={logo} alt="logo" style={{ width: '50px' }} />
@@ -131,7 +135,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page.name}
                 onClick={() => handleNavClick(page.href)}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Lora', textTransform: 'lowercase', fontSize: '1.25rem' }}
               >
                 {page.name}
               </Button>

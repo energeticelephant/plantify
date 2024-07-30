@@ -35,7 +35,7 @@ const Footer = () => {
                 to="/"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
-                BETWAGER
+                Plantify
               </RouterLink>{" "}
               {new Date().getFullYear()}
               {"."}
